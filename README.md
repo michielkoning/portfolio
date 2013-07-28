@@ -1,4 +1,4 @@
 portfolio
 =========
 
-Wordpress theme of michielkoning.nl
+Wordpress theme of http://michielkoning.nl
