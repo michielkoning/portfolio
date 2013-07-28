@@ -1,0 +1,128 @@
+.categories {
+	margin-bottom: 10px;
+	a {
+		margin: 0 5px;
+		padding: 3px 0;
+		border-bottom: 3px solid #fff;
+		display: block;
+		@include transition(border 0.4s ease-in-out, color 0.4s ease-in-out);
+		@media (min-width:640px) {
+			margin: 0 10px;
+		}
+
+	}
+	.current-cat a, a:hover {
+		border-bottom: 3px solid #1c1b18;
+		background: none;
+		color: #1c1b18;
+	}
+}
+
+.cat-item {
+	display: inline-block;
+}
+
+.portfolio {
+	list-style:none outside;
+	margin-top:25px;
+	margin-bottom: 40px;
+	@include cf;
+	li 	{
+		float:left;
+		width: 100%;
+		margin-bottom: 30px;
+		opacity: 1;
+		border-radius: 5px;
+		overflow: hidden;
+		position:relative;
+
+		@include box-shadow(0 0 10px #666);
+		@include transition(all 0.3s ease-in-out);
+		&:hover	{
+			@include box-shadow(0 0 15px #666);
+			opacity: 0.75;
+			.meta {
+				bottom: 0;
+			}
+		}
+
+		@media (min-width:480px) {
+			width: 48%;
+			margin-right:4%;
+			&:nth-child(2n+2) {
+				margin-right: 0;
+			}
+		}
+
+		@media (min-width:720px) {
+			width: 32%;
+			margin-right:2%;
+			&:nth-child(2n+2) {
+				margin-right: 2%;
+			}
+			&:nth-child(3n+3) {
+				margin-right: 0;
+			}
+		}
+
+		@media (min-width:980px) {
+			width: 22%;
+			margin-right:4%;
+			&:nth-child(2n+2) {
+				margin-right: 4%;
+			}
+			&:nth-child(3n+3) {
+				margin-right: 4%;
+			}
+			&:nth-child(4n+4) {
+				margin-right: 0;
+			 }
+		}
+	}
+	img {
+		display:block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.meta {
+	@include transition(bottom 0.3s ease-in-out);
+	margin-top: 5px;
+	position: absolute;
+	background: #fff;
+	width: 100%;
+	left: 0;
+	bottom: -50%;
+	z-index:99;
+	padding: 10px 10px;
+	@include box-sizing(border-box);
+	&:before {
+		@include line;
+		position:absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		content:'';
+	}
+}
+
+.tags {
+	&:before {
+		content: "\f02c";
+		display: inline-block;
+		margin-right: 5px;
+	}
+	padding-top: 5px;
+}
+
+.btn-site {
+	margin-top: 5px;
+	display: block;
+	float: right;
+	padding:0 3px;
+	&:after {
+		content: " \f105";
+	}
+}

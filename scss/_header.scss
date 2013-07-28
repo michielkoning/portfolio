@@ -1,0 +1,33 @@
+header {
+	list-style: none outside;
+	background: #ccc;
+	margin-bottom: 1px;
+	padding:9px 0;
+	position: relative;
+	&:after {
+		@include line;
+		position:absolute;
+		bottom: -2px;
+		left: 0%;
+		display: block;
+		width: 100%;
+		content:'';
+	}
+}
+.logo {
+	display: block;
+	float:left;
+	padding:0 5px;
+	margin-left: -5px;
+	border-radius:5px;
+}
+.social {
+	float:right;
+	display: inline-block;
+	a {
+		margin:0 5px 0 0;
+		padding:3px 5px;
+		margin-left: -5px;
+		border-radius:5px;
+	}
+}

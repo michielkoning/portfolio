@@ -1,0 +1,109 @@
+@font-face{
+	font-family:'FontAwesome';
+	src:url('../fonts/fontawesome-webfont.eot?v=3.0.1');
+	src:url('../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+	url('../fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+	url('../fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+	font-weight:normal;
+	font-style:normal
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: #1c1b18;
+	font-size: 14px;
+	line-height: 20px;
+	-webkit-text-size-adjust: 100%;
+}
+
+h1 {
+	font-size: 24px;
+	line-height: 32px;
+}
+h2 {
+	font-size: 18px;
+	line-height: 24px;
+}
+h3 {
+	font-size: 16px;
+	line-height: 18px;
+}
+h4 {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+a {
+	color: #1c1b18;
+	text-decoration: none;
+	@include transition(background 0.4s ease-in-out, color 0.4s ease-in-out);
+	&:hover	{
+		color: #fff;
+		background: #1c1b18;
+	}
+	&:focus {
+		outline:none;
+	}
+}
+
+::-moz-selection {
+	background: #1c1b18;
+	color:#fff;
+}
+
+::selection {
+	background: #1c1b18;
+	color:#fff;
+}
+
+header {
+	line-height: 32px;
+	font-size: 24px;
+}
+.logo {
+	text-decoration: none;
+}
+
+.social {
+	font-family: 'FontAwesome';
+}
+
+.profile {
+	font-size: 24px;
+	line-height: 32px;
+	text-align: center;
+}
+
+.tags {
+	font-size: 12px;
+	color: #666;
+	&:before {
+		font-family: 'FontAwesome';
+	}
+	a {
+		color: #666;
+		&:hover {
+			background: none;
+			text-decoration: underline;
+		}
+	}
+}
+
+.h-tag {
+	&:before {
+		font-family: 'FontAwesome';
+	}
+}
+
+.btn-site:after {
+	font-family: 'FontAwesome';
+}
+
+.categories {
+	text-align: center;
+	font-size: 12px;
+	@media (min-width:640px) {
+		font-size: 18px;
+	}
+}
